@@ -1,0 +1,7 @@
+from numpy import cos,sin,pi,exp
+from scipy.integrate import quad
+def f(x):
+  return exp(cos(-2*x*pi))+3.2
+
+res,err=quad(f,-2,2)
+print('the numerical result is {:f}(+-{:g})'.format(res,err))
